@@ -113,12 +113,24 @@
   <div class="page-card">
     <h1>Join Vervex</h1>
     <p>Hello there we are currently recruting and we are excited to have you on board!</p>
-    <form action="mailto:pingvinvok@protonmail.com" method="post" enctype="text/plain">
+    <form id="contact-form">
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
       <button type="submit">Submit</button>
     </form>
     <a href="index.html">Go back home</a>
   </div>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var message = document.getElementById('message').value.trim();
+      if (!message) {
+        return;
+      }
+      var subject = encodeURIComponent('Message for Vervex');
+      var body = encodeURIComponent(message);
+      window.location.href = 'mailto:pingvinvok@protonmail.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
 </body>
 </html>
