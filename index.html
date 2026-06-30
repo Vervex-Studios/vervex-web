@@ -319,10 +319,23 @@
       flex-wrap: wrap;
     }
 
-    .site-footer__links a {
+    .site-footer__links a,
+    .site-footer__socials a {
       font-size: 0.82rem;
       color: #888;
       text-decoration: none;
+    }
+
+    .site-footer__socials {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .site-footer__socials a:hover,
+    .site-footer__links a:hover {
+      color: #1a1510;
     }
 
     .site-footer__copyright {
@@ -398,6 +411,11 @@
       <a href="#">Work</a>
       <a href="./about.html">About</a>
       <a href="./contact.html">Contact</a>
+    </div>
+    <div class="site-footer__socials">
+      <a href="https://bsky.app/profile/vervex.hu/" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
     </div>
     <span class="site-footer__copyright">2026 Vervex Studios</span>
   </footer>
